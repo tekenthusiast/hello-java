@@ -2,8 +2,8 @@
 
 This build will always fail because it has two types of failing tests:
 
-- two based on incorrect the behavior the main code (CUT, class-under-test), leading to failed assertions
-- two based on logical errors in the test code, leading to exceptions before assertions are tested
+- based on incorrect the behavior the main code (CUT, class-under-test), leading to failed assertions
+- based on logical errors in the test code, leading to exceptions before assertions are tested
 
 # Learning Objectives
 
