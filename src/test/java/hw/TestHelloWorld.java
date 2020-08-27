@@ -1,10 +1,13 @@
- package hw;
+package hw;
 
 import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TestHelloWorld {
 
@@ -26,8 +29,8 @@ public class TestHelloWorld {
   }
 
   @Test
-  public void getMessage() { // this test is broken - fix it!
-    assertNull(fixture);
+  public void getMessage() {
+    assertNotNull(fixture);
     assertEquals("hello world", fixture.getMessage());
   }
 
@@ -35,5 +38,17 @@ public class TestHelloWorld {
   public void getYear() { // this test is OK, fix HelloWorld.java to make it pass!
     assertNotNull(fixture);
     assertEquals(2020, fixture.getYear());
+  }
+
+  @Test
+  public void getMessageInList() { // this test is broken - fix it!
+    var list = Arrays.asList(fixture);
+    assertEquals("hello world", list.get(1).getMessage());
+  }
+
+  @Test
+  public void getYearInList() { // this test is broken - fix it!
+    var list = Arrays.asList(fixture);
+    assertEquals(2020, list.get(1).getYear());
   }
 }
