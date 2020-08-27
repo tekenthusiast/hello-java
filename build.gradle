@@ -1,9 +1,19 @@
+plugins {
+    id 'com.github.sherter.google-java-format' version '0.5'
+}
+
 apply plugin: 'java'
 apply plugin: 'application'
+
 mainClassName = "hw.Main"
 
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+
 repositories {
-    google()
     jcenter()
 }
 
@@ -12,5 +22,5 @@ dependencies {
 }
 
 tasks.withType(JavaCompile) {
-    options.compilerArgs << "-Xlint:unchecked"
+    options.compilerArgs << "-Xlint:all"
 }

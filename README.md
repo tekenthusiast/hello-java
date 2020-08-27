@@ -1,7 +1,9 @@
 [![Build Status](https://travis-ci.org/LoyolaChicagoCode/hello-java.svg?branch=master)](https://travis-ci.org/LoyolaChicagoCode/hello-java)
 
-This build will always fail because it has 2 examples of failing tests:
-one based on the source code, and one based on an incorrect test.
+This build will always fail because it has two types of failing tests:
+
+- two based on incorrect the behavior the main code (CUT, class-under-test), leading to failed assertions
+- two based on logical errors in the test code, leading to exceptions before assertions are tested
 
 # Learning Objectives
 
@@ -13,7 +15,7 @@ one based on the source code, and one based on an incorrect test.
 
 # System requirements
 
-* Java 6 SDK or later
+* Java 11 SDK or later
 
 # Running the Application
 
@@ -43,6 +45,8 @@ right-click app and select Run 'All Tests'
 This shows the specific JUnit assertion errors without the need for copy and paste
 
 # Running the Application Outside Gradle
+
+*UNDER CONSTRUCTION*
 
 Unlike running the application using Gradle's `run` task,
 this allows passing command-line arguments.
